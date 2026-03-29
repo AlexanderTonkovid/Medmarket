@@ -11,7 +11,10 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: isStaticExport,
   },
-  ...(isStaticExport && { output: "export" }),
+  ...(isStaticExport && {
+    output: "export",
+    basePath: "/Medmarket",
+  }),
 };
 
 export default withNextIntl(nextConfig);
