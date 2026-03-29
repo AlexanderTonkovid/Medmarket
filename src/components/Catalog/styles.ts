@@ -111,7 +111,7 @@ export const SectionTitle = styled.h2`
 /* ===== Category Block ===== */
 
 export const CategoryBlock = styled.article`
-  margin-bottom: 56px;
+  margin-bottom: 64px;
 
   &:last-child {
     margin-bottom: 0;
@@ -121,12 +121,22 @@ export const CategoryBlock = styled.article`
 export const CategoryHeader = styled.div`
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   margin-bottom: 8px;
 `;
 
-export const CategoryIcon = styled.span`
-  font-size: 1.5rem;
+export const CategoryImage = styled.div`
+  width: 48px;
+  height: 48px;
+  border-radius: ${({ theme }) => theme.radius.md};
+  overflow: hidden;
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;
 
 export const CategoryTitle = styled.h3`
@@ -137,75 +147,81 @@ export const CategoryTitle = styled.h3`
 export const CategoryDescription = styled.p`
   color: ${({ theme }) => theme.colors.textSecondary};
   font-size: 0.95rem;
-  margin-bottom: 20px;
-  padding-left: 40px;
+  margin-bottom: 24px;
+  padding-left: 64px;
 `;
 
-/* ===== Product Table ===== */
+/* ===== Product Grid (cards with images) ===== */
 
-export const ProductTable = styled.div`
+export const ProductGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+  }
+`;
+
+export const ProductCard = styled.div`
+  background: ${({ theme }) => theme.colors.bgCard};
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: ${({ theme }) => theme.radius.md};
   overflow: hidden;
+  transition: all ${({ theme }) => theme.transitions.normal};
   box-shadow: ${({ theme }) => theme.shadows.sm};
-`;
-
-export const TableHeader = styled.div`
-  display: grid;
-  grid-template-columns: 40px 1fr 1.5fr;
-  gap: 12px;
-  padding: 12px 20px;
-  background: ${({ theme }) => theme.colors.primaryLight};
-  font-weight: 700;
-  font-size: 0.85rem;
-  color: ${({ theme }) => theme.colors.primaryDark};
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    grid-template-columns: 1fr;
-    & > span:first-child {
-      display: none;
-    }
-  }
-`;
-
-export const TableRow = styled.div`
-  display: grid;
-  grid-template-columns: 40px 1fr 1.5fr;
-  gap: 12px;
-  padding: 14px 20px;
-  align-items: center;
-  border-top: 1px solid ${({ theme }) => theme.colors.borderLight};
-  background: ${({ theme }) => theme.colors.white};
-  transition: background ${({ theme }) => theme.transitions.fast};
 
   &:hover {
-    background: ${({ theme }) => theme.colors.primaryLight};
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    grid-template-columns: 1fr;
-    gap: 4px;
-
-    & > span:first-child {
-      display: none;
-    }
+    transform: translateY(-4px);
+    box-shadow: ${({ theme }) => theme.shadows.lg};
+    border-color: ${({ theme }) => theme.colors.primary};
   }
 `;
 
-export const ProductIcon = styled.span`
-  font-size: 1.2rem;
-  text-align: center;
+export const ProductImageWrapper = styled.div`
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: ${({ theme }) => theme.colors.borderLight};
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform ${({ theme }) => theme.transitions.normal};
+  }
+
+  ${ProductCard}:hover & img {
+    transform: scale(1.05);
+  }
 `;
 
-export const ProductName = styled.span`
+export const ProductImagePlaceholder = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  background: ${({ theme }) => theme.colors.primaryLight};
+  color: ${({ theme }) => theme.colors.primary};
+`;
+
+export const ProductInfo = styled.div`
+  padding: 14px 16px;
+`;
+
+export const ProductName = styled.h4`
   font-weight: 600;
   font-size: 0.95rem;
   color: ${({ theme }) => theme.colors.text};
+  margin-bottom: 4px;
 `;
 
-export const ProductDescription = styled.span`
-  font-size: 0.9rem;
+export const ProductDescription = styled.p`
+  font-size: 0.85rem;
   color: ${({ theme }) => theme.colors.textSecondary};
+  line-height: 1.4;
 `;

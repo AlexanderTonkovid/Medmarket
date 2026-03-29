@@ -3,65 +3,169 @@ export type CategorySlug = "ppe" | "injection" | "dressing" | "general";
 export interface Product {
   slug: string;
   category: CategorySlug;
-  icon: string;
+  image: string | null;
 }
 
 export interface Category {
   slug: CategorySlug;
-  icon: string;
+  image: string;
   products: Product[];
 }
 
 export const categories: Category[] = [
   {
     slug: "ppe",
-    icon: "🛡️",
+    image: "/images/categories/ppe.png",
     products: [
-      { slug: "latex_gloves", category: "ppe", icon: "🧤" },
-      { slug: "nitrile_gloves", category: "ppe", icon: "🧤" },
-      { slug: "vinyl_gloves", category: "ppe", icon: "🧤" },
-      { slug: "medical_masks", category: "ppe", icon: "😷" },
-      { slug: "respirators", category: "ppe", icon: "😷" },
-      { slug: "shoe_covers", category: "ppe", icon: "🥿" },
-      { slug: "caps", category: "ppe", icon: "🧢" },
+      {
+        slug: "latex_gloves",
+        category: "ppe",
+        image: "/images/products/latex_gloves.png",
+      },
+      {
+        slug: "nitrile_gloves",
+        category: "ppe",
+        image: "/images/products/latex_gloves.png",
+      },
+      {
+        slug: "vinyl_gloves",
+        category: "ppe",
+        image: "/images/products/latex_gloves.png",
+      },
+      {
+        slug: "medical_masks",
+        category: "ppe",
+        image: "/images/products/medical_masks.png",
+      },
+      {
+        slug: "respirators",
+        category: "ppe",
+        image: "/images/products/respirators.png",
+      },
+      {
+        slug: "shoe_covers",
+        category: "ppe",
+        image: "/images/products/shoe_covers.png",
+      },
+      { slug: "caps", category: "ppe", image: "/images/products/caps.png" },
     ],
   },
   {
     slug: "injection",
-    icon: "💉",
+    image: "/images/categories/injection.png",
     products: [
-      { slug: "insulin_syringes", category: "injection", icon: "💉" },
-      { slug: "standard_syringes", category: "injection", icon: "💉" },
-      { slug: "janet_syringes", category: "injection", icon: "💉" },
-      { slug: "injection_needles", category: "injection", icon: "📌" },
-      { slug: "iv_catheters", category: "injection", icon: "🔧" },
-      { slug: "cavity_catheters", category: "injection", icon: "🔧" },
-      { slug: "infusion_sets", category: "injection", icon: "🩸" },
+      {
+        slug: "insulin_syringes",
+        category: "injection",
+        image: "/images/products/insulin_syringes.png",
+      },
+      {
+        slug: "standard_syringes",
+        category: "injection",
+        image: "/images/products/insulin_syringes.png",
+      },
+      {
+        slug: "janet_syringes",
+        category: "injection",
+        image: "/images/products/insulin_syringes.png",
+      },
+      {
+        slug: "injection_needles",
+        category: "injection",
+        image: "/images/products/injection_needles.png",
+      },
+      {
+        slug: "iv_catheters",
+        category: "injection",
+        image: "/images/products/iv_catheters.png",
+      },
+      {
+        slug: "cavity_catheters",
+        category: "injection",
+        image: "/images/products/iv_catheters.png",
+      },
+      {
+        slug: "infusion_sets",
+        category: "injection",
+        image: "/images/products/infusion_sets.png",
+      },
     ],
   },
   {
     slug: "dressing",
-    icon: "🩹",
+    image: "/images/categories/dressing.png",
     products: [
-      { slug: "bandages", category: "dressing", icon: "🩹" },
-      { slug: "gauze", category: "dressing", icon: "🧻" },
-      { slug: "cotton", category: "dressing", icon: "☁️" },
-      { slug: "catgut", category: "dressing", icon: "🧵" },
-      { slug: "nylon_suture", category: "dressing", icon: "🧵" },
-      { slug: "plasters", category: "dressing", icon: "🩹" },
-      { slug: "ready_dressings", category: "dressing", icon: "🩹" },
+      {
+        slug: "bandages",
+        category: "dressing",
+        image: "/images/products/bandages.png",
+      },
+      {
+        slug: "gauze",
+        category: "dressing",
+        image: "/images/products/gauze.png",
+      },
+      {
+        slug: "cotton",
+        category: "dressing",
+        image: "/images/products/cotton.png",
+      },
+      {
+        slug: "catgut",
+        category: "dressing",
+        image: "/images/products/catgut.png",
+      },
+      {
+        slug: "nylon_suture",
+        category: "dressing",
+        image: "/images/products/catgut.png",
+      },
+      {
+        slug: "plasters",
+        category: "dressing",
+        image: "/images/products/plasters.png",
+      },
+      {
+        slug: "ready_dressings",
+        category: "dressing",
+        image: "/images/products/ready_dressings.png",
+      },
     ],
   },
   {
     slug: "general",
-    icon: "🏥",
+    image: "/images/categories/general.png",
     products: [
-      { slug: "disposable_sheets", category: "general", icon: "🛏️" },
-      { slug: "disposable_diapers", category: "general", icon: "🛏️" },
-      { slug: "spatulas", category: "general", icon: "🥄" },
-      { slug: "probes", category: "general", icon: "🔬" },
-      { slug: "analysis_containers", category: "general", icon: "🫙" },
-      { slug: "disposal_containers", category: "general", icon: "🗑️" },
+      {
+        slug: "disposable_sheets",
+        category: "general",
+        image: "/images/products/disposable_sheets.png",
+      },
+      {
+        slug: "disposable_diapers",
+        category: "general",
+        image: "/images/products/disposable_diapers.png",
+      },
+      {
+        slug: "spatulas",
+        category: "general",
+        image: "/images/products/spatulas.png",
+      },
+      {
+        slug: "probes",
+        category: "general",
+        image: "/images/products/probes.png",
+      },
+      {
+        slug: "analysis_containers",
+        category: "general",
+        image: "/images/products/analysis_containers.png",
+      },
+      {
+        slug: "disposal_containers",
+        category: "general",
+        image: "/images/products/disposal_containers.png",
+      },
     ],
   },
 ];
