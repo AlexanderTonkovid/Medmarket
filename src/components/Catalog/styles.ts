@@ -87,7 +87,7 @@ export const HeroCta = styled.a`
 export const CatalogSection = styled.section`
   max-width: 1200px;
   margin: 0 auto;
-  padding: 64px 20px;
+  padding: 40px 20px 64px;
 `;
 
 export const SectionTitle = styled.h2`
@@ -148,7 +148,6 @@ export const CategoryDescription = styled.p`
   color: ${({ theme }) => theme.colors.textSecondary};
   font-size: 0.95rem;
   margin-bottom: 24px;
-  padding-left: 64px;
 `;
 
 /* ===== Product Grid (cards with images) ===== */

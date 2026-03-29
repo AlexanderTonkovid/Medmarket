@@ -29,14 +29,6 @@ export default function CategorySection({ category }: Props) {
   return (
     <CategoryBlock>
       <CategoryHeader>
-        <CategoryImage>
-          <Image
-            src={category.image}
-            alt={tCat("title")}
-            width={48}
-            height={48}
-          />
-        </CategoryImage>
         <CategoryTitle>{tCat("title")}</CategoryTitle>
       </CategoryHeader>
       <CategoryDescription>{tCat("description")}</CategoryDescription>
