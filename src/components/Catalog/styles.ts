@@ -225,3 +225,119 @@ export const ProductDescription = styled.p`
   color: ${({ theme }) => theme.colors.textSecondary};
   line-height: 1.4;
 `;
+
+/* ===== Product Modal ===== */
+
+export const ModalOverlay = styled.div`
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.2s ease;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    padding: 0;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+`;
+
+export const ModalContent = styled.div`
+  background: ${({ theme }) => theme.colors.white};
+  border-radius: 12px;
+  max-width: 480px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.25s ease;
+  position: relative;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+`;
+
+export const ModalClose = styled.button`
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background ${({ theme }) => theme.transitions.fast};
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+`;
+
+export const ModalScrollArea = styled.div``;
+
+export const ModalImageWrapper = styled.div`
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #f4f6f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+`;
+
+export const ModalBody = styled.div`
+  padding: 24px;
+`;
+
+export const ModalProductName = styled.h3`
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: ${({ theme }) => theme.colors.text};
+  margin-bottom: 8px;
+`;
+
+export const ModalProductDescription = styled.p`
+  font-size: 1rem;
+  color: ${({ theme }) => theme.colors.textSecondary};
+  line-height: 1.6;
+`;

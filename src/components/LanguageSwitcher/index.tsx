@@ -8,6 +8,10 @@ import type { Locale } from "@/i18n/routing";
 const Wrapper = styled.div`
   display: flex;
   gap: 4px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    display: none;
+  }
 `;
 
 const LangButton = styled.button<{ $active: boolean }>`

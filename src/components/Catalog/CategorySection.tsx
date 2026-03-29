@@ -1,8 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import type { Category } from "@/data/products";
+import type { Category, Product } from "@/data/products";
+import ProductModal from "./ProductModal";
 import {
   CategoryBlock,
   CategoryHeader,
@@ -25,6 +27,11 @@ interface Props {
 export default function CategorySection({ category }: Props) {
   const tCat = useTranslations(`catalog.categories.${category.slug}`);
   const tProducts = useTranslations(`products.${category.slug}`);
+  const [selectedProduct, setSelectedProduct] = useState<{
+    image: string | null;
+    name: string;
+    description: string;
+  } | null>(null);
 
   return (
     <CategoryBlock>
@@ -39,7 +46,16 @@ export default function CategorySection({ category }: Props) {
           const desc = tProducts(`${product.slug}.description`);
 
           return (
-            <ProductCard key={product.slug}>
+            <ProductCard
+              key={product.slug}
+              onClick={() =>
+                setSelectedProduct({
+                  image: product.image,
+                  name,
+                  description: desc,
+                })
+              }
+            >
               <ProductImageWrapper>
                 {product.image ? (
                   <Image
@@ -61,6 +77,15 @@ export default function CategorySection({ category }: Props) {
           );
         })}
       </ProductGrid>
+
+      {selectedProduct && (
+        <ProductModal
+          image={selectedProduct.image}
+          name={selectedProduct.name}
+          description={selectedProduct.description}
+          onClose={() => setSelectedProduct(null)}
+        />
+      )}
     </CategoryBlock>
   );
 }
