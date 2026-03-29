@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import StyledComponentsRegistry from "@/lib/registry";
 import ThemeWrapper from "@/lib/ThemeWrapper";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ukMessages from "@/messages/uk.json";
+import enMessages from "@/messages/en.json";
+
+const allMessages: Record<string, typeof ukMessages> = {
+  uk: ukMessages,
+  en: enMessages,
+};
 
 type Props = {
   children: React.ReactNode;
@@ -23,18 +30,19 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "meta" });
+  const msgs = allMessages[locale] ?? allMessages.uk;
+  const meta = (msgs as any).meta;
 
   return {
     title: {
-      default: t("title"),
+      default: meta.title,
       template: `%s | MedMarket`,
     },
-    description: t("description"),
-    keywords: t("keywords"),
+    description: meta.description,
+    keywords: meta.keywords,
     openGraph: {
-      title: t("title"),
-      description: t("description"),
+      title: meta.title,
+      description: meta.description,
       type: "website",
       locale: locale === "uk" ? "uk_UA" : "en_US",
       siteName: "MedMarket",
@@ -60,7 +68,9 @@ export default async function LocaleLayout({ children, params }: Props) {
     notFound();
   }
 
-  const messages = await getMessages();
+  setRequestLocale(locale);
+
+  const messages = allMessages[locale] ?? allMessages.uk;
 
   return (
     <html lang={locale}>
