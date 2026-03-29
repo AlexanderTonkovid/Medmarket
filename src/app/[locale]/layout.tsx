@@ -1,0 +1,92 @@
+import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages, getTranslations } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
+import StyledComponentsRegistry from "@/lib/registry";
+import ThemeWrapper from "@/lib/ThemeWrapper";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
+type Props = {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta" });
+
+  return {
+    title: {
+      default: t("title"),
+      template: `%s | MedMarket`,
+    },
+    description: t("description"),
+    keywords: t("keywords"),
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      type: "website",
+      locale: locale === "uk" ? "uk_UA" : "en_US",
+      siteName: "MedMarket",
+    },
+    alternates: {
+      canonical: locale === "uk" ? "/" : `/${locale}`,
+      languages: {
+        uk: "/",
+        en: "/en",
+      },
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
+
+export default async function LocaleLayout({ children, params }: Props) {
+  const { locale } = await params;
+
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+
+  const messages = await getMessages();
+
+  return (
+    <html lang={locale}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>
+        <StyledComponentsRegistry>
+          <NextIntlClientProvider messages={messages}>
+            <ThemeWrapper>
+              <Header />
+              <main>{children}</main>
+              <Footer />
+            </ThemeWrapper>
+          </NextIntlClientProvider>
+        </StyledComponentsRegistry>
+      </body>
+    </html>
+  );
+}

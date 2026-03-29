@@ -1,0 +1,139 @@
+{
+  "meta": {
+    "title": "MedMarket — Medical Consumables",
+    "description": "Online store of medical consumables: gloves, syringes, dressings, personal protective equipment. Delivery across Ukraine.",
+    "keywords": "medical consumables, medical gloves, syringes, bandages, medical masks, catheters, infusion sets"
+  },
+  "header": {
+    "home": "Home",
+    "catalog": "Catalog",
+    "about": "About",
+    "contacts": "Contacts",
+    "phone": "+380 (XX) XXX-XX-XX"
+  },
+  "hero": {
+    "title": "Medical Consumables",
+    "subtitle": "Reliable supplier for clinics, laboratories, and pharmacies",
+    "cta": "Browse Catalog"
+  },
+  "catalog": {
+    "title": "Product Catalog",
+    "categories": {
+      "ppe": {
+        "title": "Personal Protective Equipment (PPE)",
+        "description": "Gloves, masks, respirators, and other protective equipment for medical personnel"
+      },
+      "injection": {
+        "title": "Injection Products & Infusion Systems",
+        "description": "Syringes, needles, catheters, and infusion systems for injections and IV therapy"
+      },
+      "dressing": {
+        "title": "Dressing & Suture Materials",
+        "description": "Bandages, gauze, cotton, suture materials, plasters, and ready-made dressings"
+      },
+      "general": {
+        "title": "General Products & Sanitation",
+        "description": "Disposable sheets, diapers, spatulas, probes, and containers for tests and disposal"
+      }
+    }
+  },
+  "products": {
+    "ppe": {
+      "latex_gloves": {
+        "name": "Latex Gloves",
+        "description": "Sterile / Examination"
+      },
+      "nitrile_gloves": {
+        "name": "Nitrile Gloves",
+        "description": "Sterile / Examination"
+      },
+      "vinyl_gloves": {
+        "name": "Vinyl Gloves",
+        "description": "Sterile / Examination"
+      },
+      "medical_masks": {
+        "name": "Medical Masks",
+        "description": "Three-layer, disposable"
+      },
+      "respirators": { "name": "Respirators", "description": "FFP2/FFP3" },
+      "shoe_covers": { "name": "Shoe Covers", "description": "Disposable" },
+      "caps": { "name": "Caps", "description": "Disposable" }
+    },
+    "injection": {
+      "insulin_syringes": { "name": "Insulin Syringes", "description": "1 ml" },
+      "standard_syringes": {
+        "name": "Standard Syringes",
+        "description": "2, 5, 10, 20 ml"
+      },
+      "janet_syringes": { "name": "Janet Syringes", "description": "150 ml" },
+      "injection_needles": {
+        "name": "Injection Needles",
+        "description": "Various sizes (G)"
+      },
+      "iv_catheters": {
+        "name": "IV Catheters",
+        "description": "Cannulas of various sizes"
+      },
+      "cavity_catheters": {
+        "name": "Cavity Catheters",
+        "description": "For fluid drainage"
+      },
+      "infusion_sets": {
+        "name": "Infusion Sets",
+        "description": "For drip transfusion"
+      }
+    },
+    "dressing": {
+      "bandages": {
+        "name": "Bandages",
+        "description": "Sterile / non-sterile, various widths"
+      },
+      "gauze": { "name": "Gauze", "description": "In rolls / napkins" },
+      "cotton": { "name": "Cotton Wool", "description": "Medical grade" },
+      "catgut": {
+        "name": "Suture Material (Catgut)",
+        "description": "Absorbable"
+      },
+      "nylon_suture": {
+        "name": "Suture Material (Nylon)",
+        "description": "Non-absorbable"
+      },
+      "plasters": { "name": "Plasters", "description": "Various sizes" },
+      "ready_dressings": {
+        "name": "Ready-made Dressings",
+        "description": "Sterile, for wounds and catheters"
+      }
+    },
+    "general": {
+      "disposable_sheets": {
+        "name": "Disposable Sheets",
+        "description": "For examination couches"
+      },
+      "disposable_diapers": {
+        "name": "Disposable Underpads",
+        "description": "For procedures"
+      },
+      "spatulas": { "name": "Spatulas", "description": "For oral examination" },
+      "probes": { "name": "Probes", "description": "For swab collection" },
+      "analysis_containers": {
+        "name": "Analysis Containers",
+        "description": "Urine, stool"
+      },
+      "disposal_containers": {
+        "name": "Disposal Containers",
+        "description": "For sharps waste"
+      }
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "address": "Ukraine",
+    "workingHours": "Mon-Fri: 9:00 AM - 6:00 PM"
+  },
+  "common": {
+    "readMore": "Read More",
+    "orderNow": "Order Now",
+    "product": "Product",
+    "description": "Description"
+  }
+}
