@@ -36,6 +36,25 @@ const Logo = styled.a`
   }
 `;
 
+const LeftSection = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 16px;
+`;
+
+const Slogan = styled.span`
+  font-size: 0.85rem;
+  color: ${({ theme }) => theme.colors.textSecondary};
+  font-weight: 400;
+  border-left: 1px solid ${({ theme }) => theme.colors.border};
+  padding-left: 16px;
+  white-space: nowrap;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    display: none;
+  }
+`;
+
 const RightSection = styled.div`
   display: flex;
   align-items: center;
@@ -55,9 +74,12 @@ export default function Header() {
   return (
     <HeaderWrapper>
       <Nav>
-        <Logo href="/">
-          ⚕️ Med<span>Market</span>
-        </Logo>
+        <LeftSection>
+          <Logo href="/">
+            ⚕️ Med<span>Market</span>
+          </Logo>
+          <Slogan>{t("slogan")}</Slogan>
+        </LeftSection>
         <RightSection>
           <Phone href="tel:+380000000000">{t("phone")}</Phone>
           <LanguageSwitcher />

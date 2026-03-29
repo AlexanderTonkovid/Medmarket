@@ -170,6 +170,7 @@ export const ProductCard = styled.div`
   overflow: hidden;
   transition: all ${({ theme }) => theme.transitions.normal};
   box-shadow: ${({ theme }) => theme.shadows.sm};
+  cursor: pointer;
 
   &:hover {
     transform: translateY(-4px);
