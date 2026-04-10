@@ -5,7 +5,8 @@ export type DirectionSlug =
   | "general"
   | "respiratory"
   | "catheters_urology"
-  | "surgical";
+  | "surgical"
+  | "test_tubes";
 
 export interface Product {
   slug: string;
@@ -291,6 +292,51 @@ export const directions: Direction[] = [
         slug: "surgical_blades",
         image: "/images/products/surgical_blades.png",
         products: [{ slug: "nm_f006", article: "NM-F006", image: null }],
+      },
+    ],
+  },
+  {
+    slug: "test_tubes",
+    categories: [
+      {
+        slug: "vacuum_tubes",
+        image: "/images/products/vacuum_tubes.webp",
+        products: [],
+      },
+      {
+        slug: "conical_centrifuge_tubes",
+        image: "/images/products/conical_centrifuge_tubes.webp",
+        products: [],
+      },
+      {
+        slug: "glass_test_tubes",
+        image: "/images/products/glass_test_tubes.jpg",
+        products: [],
+      },
+      {
+        slug: "screw_cap_tubes",
+        image: "/images/products/screw_cap_tubes.jpg",
+        products: [],
+      },
+      {
+        slug: "specimen_containers",
+        image: "/images/products/specimen_containers.webp",
+        products: [],
+      },
+      {
+        slug: "microcentrifuge_tubes",
+        image: null,
+        products: [],
+      },
+      {
+        slug: "pcr_tubes",
+        image: null,
+        products: [],
+      },
+      {
+        slug: "coagulation_tubes",
+        image: null,
+        products: [],
       },
     ],
   },

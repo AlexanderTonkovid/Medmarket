@@ -47,6 +47,10 @@
       "surgical": {
         "title": "Surgical Instruments",
         "description": "Disposable surgical blades, scalpels, and other instruments for surgical procedures"
+      },
+      "test_tubes": {
+        "title": "Test Tubes & Laboratory Ware",
+        "description": "Vacuum, centrifuge, glass, plastic test tubes and containers for laboratory diagnostics"
       }
     }
   },
@@ -230,6 +234,38 @@
     "surgical_blades": {
       "name": "Surgical Blades",
       "description": "Sterile disposable surgical blades. Carbon or stainless steel. Sizes 10#, 11#, 15#, 21#, 22#, 23#, 24#. Individual foil pack."
+    },
+    "vacuum_tubes": {
+      "name": "Vacuum Blood Collection Tubes",
+      "description": "Vacuum blood collection tubes with color-coded caps for venous blood. Each color corresponds to a specific additive (biochemistry, hematology, coagulation, etc.)."
+    },
+    "conical_centrifuge_tubes": {
+      "name": "Conical Centrifuge Tubes",
+      "description": "Conical centrifuge tubes (Falcon) 15 ml and 50 ml, graduated. For centrifugation, cell pelleting, sample storage, and reagent handling."
+    },
+    "glass_test_tubes": {
+      "name": "Glass Laboratory Test Tubes",
+      "description": "Classic glass test tubes with natural cork stoppers. For chemical reactions, reagent storage, educational experiments, and visual control."
+    },
+    "screw_cap_tubes": {
+      "name": "Screw-Cap Test Tubes",
+      "description": "Plastic or glass screw-cap test tubes, graduated. For transportation and long-term sample storage, sterile work."
+    },
+    "specimen_containers": {
+      "name": "Sterile Specimen Containers",
+      "description": "Sterile plastic containers for collection of urine, saliva, stool, and other biomaterials. Collection and transport of specimens for analysis."
+    },
+    "microcentrifuge_tubes": {
+      "name": "Microcentrifuge Tubes",
+      "description": "Small plastic tubes (Eppendorf) 0.2–2 ml for micro-volumes. PCR, DNA/RNA extraction, work with small volumes in molecular biology."
+    },
+    "pcr_tubes": {
+      "name": "PCR Tubes",
+      "description": "Thin-walled 0.2 ml tubes for PCR analysis. Polymerase chain reaction, DNA/RNA amplification."
+    },
+    "coagulation_tubes": {
+      "name": "Coagulation Tubes",
+      "description": "Sodium citrate tubes (light blue cap) for blood coagulation testing. Coagulation system studies (PT, APTT, etc.)."
     }
   },
   "products": {
