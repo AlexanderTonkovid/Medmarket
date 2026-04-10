@@ -8,7 +8,7 @@ import {
   ModalOverlay,
   ModalContent,
   ModalClose,
-  ModalScrollArea,
+  ModalInner,
   ModalImageWrapper,
   ModalBody,
   ModalProductName,
@@ -58,14 +58,14 @@ export default function ProductModal({ category, onClose }: Props) {
         <ModalClose onClick={onClose} aria-label="Close">
           ✕
         </ModalClose>
-        <ModalScrollArea>
+        <ModalInner>
           <ModalImageWrapper>
             {category.image ? (
               <Image
                 src={category.image}
                 alt={name}
-                width={560}
-                height={560}
+                width={400}
+                height={400}
                 quality={90}
               />
             ) : (
@@ -98,7 +98,7 @@ export default function ProductModal({ category, onClose }: Props) {
               <ModalNoProducts>{tCommon("noProducts")}</ModalNoProducts>
             )}
           </ModalBody>
-        </ModalScrollArea>
+        </ModalInner>
       </ModalContent>
     </ModalOverlay>
   );

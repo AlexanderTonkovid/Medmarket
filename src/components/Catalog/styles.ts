@@ -257,15 +257,13 @@ export const ModalOverlay = styled.div`
 export const ModalContent = styled.div`
   background: ${({ theme }) => theme.colors.white};
   border-radius: 12px;
-  max-width: 560px;
+  max-width: 860px;
   width: 100%;
   max-height: 90vh;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   animation: slideUp 0.25s ease;
   position: relative;
-  display: flex;
-  flex-direction: column;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     max-width: 100%;
@@ -312,32 +310,57 @@ export const ModalClose = styled.button`
 export const ModalScrollArea = styled.div`
   overflow-y: auto;
   flex: 1;
+  min-height: 0;
+`;
+
+export const ModalInner = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: 560px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    flex-direction: column;
+    height: 100%;
+  }
 `;
 
 export const ModalImageWrapper = styled.div`
-  width: 100%;
-  aspect-ratio: 4 / 3;
+  width: 340px;
+  flex-shrink: 0;
   background: #f4f6f8;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 12px 0 0 12px;
+  overflow: hidden;
+  align-self: stretch;
 
   img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+    padding: 16px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    width: 100%;
+    height: 240px;
+    border-radius: 0;
   }
 `;
 
 export const ModalBody = styled.div`
-  padding: 24px;
+  padding: 28px 32px;
+  flex: 1;
+  overflow-y: auto;
+  min-width: 0;
 `;
 
 export const ModalProductName = styled.h3`
   font-size: 1.25rem;
   font-weight: 700;
   color: ${({ theme }) => theme.colors.text};
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 `;
 
 export const ModalProductDescription = styled.p`
@@ -349,7 +372,7 @@ export const ModalProductDescription = styled.p`
 export const ModalDivider = styled.hr`
   border: none;
   border-top: 1px solid ${({ theme }) => theme.colors.border};
-  margin: 20px 0;
+  margin: 16px 0;
 `;
 
 export const ModalProductsTitle = styled.h4`
