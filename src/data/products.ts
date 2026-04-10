@@ -300,27 +300,27 @@ export const directions: Direction[] = [
     categories: [
       {
         slug: "vacuum_tubes",
-        image: "/images/products/vacuum_tubes.webp",
+        image: "/images/products/vacuum_tubes.png",
         products: [{ slug: "tt_vacuum", article: "", image: null }],
       },
       {
         slug: "conical_centrifuge_tubes",
-        image: "/images/products/conical_centrifuge_tubes.webp",
+        image: "/images/products/conical_centrifuge_tubes.png",
         products: [{ slug: "tt_conical", article: "", image: null }],
       },
       {
         slug: "glass_test_tubes",
-        image: "/images/products/glass_test_tubes.jpg",
+        image: "/images/products/glass_test_tubes.png",
         products: [{ slug: "tt_glass", article: "", image: null }],
       },
       {
         slug: "screw_cap_tubes",
-        image: "/images/products/screw_cap_tubes.jpg",
+        image: "/images/products/screw_cap_tubes.png",
         products: [{ slug: "tt_screw_cap", article: "", image: null }],
       },
       {
         slug: "specimen_containers",
-        image: "/images/products/specimen_containers.webp",
+        image: "/images/products/specimen_containers.png",
         products: [{ slug: "tt_specimen", article: "", image: null }],
       },
       {
