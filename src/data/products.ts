@@ -85,7 +85,7 @@ export const directions: Direction[] = [
       },
       {
         slug: "tuberculin_syringes",
-        image: null,
+        image: "/images/products/tuberculin_syringes.png",
         products: [{ slug: "nm_b004", article: "NM-B004", image: null }],
       },
       {
@@ -115,17 +115,17 @@ export const directions: Direction[] = [
       },
       {
         slug: "blood_transfusion_sets",
-        image: null,
+        image: "/images/products/blood_transfusion_sets.png",
         products: [{ slug: "nm_b015", article: "NM-B015", image: null }],
       },
       {
         slug: "scalp_vein_sets",
-        image: null,
+        image: "/images/products/scalp_vein_sets.png",
         products: [{ slug: "nm_b016", article: "NM-B016", image: null }],
       },
       {
         slug: "infusion_pumps",
-        image: null,
+        image: "/images/products/infusion_pumps.png",
         products: [{ slug: "nm_b022", article: "NM-B022", image: null }],
       },
     ],
@@ -150,7 +150,7 @@ export const directions: Direction[] = [
       },
       {
         slug: "non_woven_swabs",
-        image: null,
+        image: "/images/products/non_woven_swabs.png",
         products: [{ slug: "nm_e005", article: "NM-E005", image: null }],
       },
       {
@@ -215,7 +215,7 @@ export const directions: Direction[] = [
     categories: [
       {
         slug: "oxygen_masks",
-        image: null,
+        image: "/images/products/oxygen_masks.png",
         products: [
           { slug: "nm_a001", article: "NM-A001", image: null },
           { slug: "nm_a006", article: "NM-A006", image: null },
@@ -223,32 +223,32 @@ export const directions: Direction[] = [
       },
       {
         slug: "nebulizer_masks",
-        image: null,
+        image: "/images/products/nebulizer_masks.png",
         products: [{ slug: "nm_a002", article: "NM-A002", image: null }],
       },
       {
         slug: "nasal_cannulas",
-        image: null,
+        image: "/images/products/nasal_cannulas.png",
         products: [{ slug: "nm_a005", article: "NM-A005", image: null }],
       },
       {
         slug: "tracheostomy_masks",
-        image: null,
+        image: "/images/products/tracheostomy_masks.png",
         products: [{ slug: "nm_a007", article: "NM-A007", image: null }],
       },
       {
         slug: "manual_resuscitators",
-        image: null,
+        image: "/images/products/manual_resuscitators.png",
         products: [{ slug: "nm_a012", article: "NM-A012", image: null }],
       },
       {
         slug: "guedel_airways",
-        image: null,
+        image: "/images/products/guedel_airways.png",
         products: [{ slug: "nm_c027", article: "NM-C027", image: null }],
       },
       {
         slug: "laryngeal_masks",
-        image: null,
+        image: "/images/products/laryngeal_masks.png",
         products: [{ slug: "nm_c029", article: "NM-C029", image: null }],
       },
     ],
@@ -258,7 +258,7 @@ export const directions: Direction[] = [
     categories: [
       {
         slug: "foley_catheters",
-        image: null,
+        image: "/images/products/foley_catheters.png",
         products: [
           { slug: "nm_c001", article: "NM-C001", image: null },
           { slug: "nm_c002", article: "NM-C002", image: null },
@@ -266,12 +266,12 @@ export const directions: Direction[] = [
       },
       {
         slug: "nelaton_catheters",
-        image: null,
+        image: "/images/products/nelaton_catheters.png",
         products: [{ slug: "nm_c042", article: "NM-C042", image: null }],
       },
       {
         slug: "urine_bags",
-        image: null,
+        image: "/images/products/urine_bags.png",
         products: [
           { slug: "nm_d001", article: "NM-D001", image: null },
           { slug: "nm_d002", article: "NM-D002", image: null },
@@ -279,7 +279,7 @@ export const directions: Direction[] = [
       },
       {
         slug: "urine_meters",
-        image: null,
+        image: "/images/products/urine_meters.png",
         products: [{ slug: "nm_d005", article: "NM-D005", image: null }],
       },
     ],
@@ -289,7 +289,7 @@ export const directions: Direction[] = [
     categories: [
       {
         slug: "surgical_blades",
-        image: null,
+        image: "/images/products/surgical_blades.png",
         products: [{ slug: "nm_f006", article: "NM-F006", image: null }],
       },
     ],
