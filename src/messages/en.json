@@ -69,19 +69,19 @@
     },
     "medical_masks": {
       "name": "Medical Masks",
-      "description": "Three-layer surgical face masks. Inner layer — soft non-woven material, middle — high-efficiency meltblown filter (BFE ≥ 95–98%), outer — protective. Adjustable nose clip and elastic ear loops. Color: white, blue, green, black. Standard adult size (≈ 17.5 × 9.5 cm)."
+      "description": "Three-layer disposable masks (spunbond + meltblown + spunbond). Size 175 × 95 mm, elastic ear loops, aluminum nose clip. BFE ≥ 95%. Non-sterile."
     },
     "respirators": {
       "name": "Respirators",
-      "description": "Medical respirators N95 / KN95 / FFP2 protection class. Multilayer construction with effective filtering material (filtration ≥ 95%). Adjustable nose clip and elastic straps. Color: white, gray, blue. Universal adult size."
+      "description": "Filtering half-masks FFP2 / FFP3 (filtration up to 99%). Multilayer non-woven filter, adjustable straps. Option with exhalation valve. Standard EN 149:2001+A1:2009."
     },
     "shoe_covers": {
       "name": "Shoe Covers",
-      "description": "Disposable medical shoe covers. Made of durable polyethylene with elastic cuff for snug fit. Protect footwear and floors from contamination, liquids, and microorganisms. Color: blue, green, white, transparent. Universal size (length ≈ 40 cm, width ≈ 14–16 cm)."
+      "description": "Disposable shoe covers made of high-density polyethylene or spunbond. Thickness 20–40 µm, size 39 × 15 cm. Double elastic band. Smooth or anti-slip surface. Color: blue / white."
     },
     "caps": {
       "name": "Caps",
-      "description": "Disposable medical caps (bouffant / beret). Made of non-woven spunbond with elastic edge. Color: white, blue, green. Universal size (head circumference 54–62 cm)."
+      "description": "Disposable medical caps made of spunbond 12–20 g/m². Bouffant or elastic edge type. Universal size (up to 60 cm circumference). Color: white, blue, green. High breathability."
     },
     "standard_syringes": {
       "name": "Standard Syringes",
@@ -97,19 +97,19 @@
     },
     "janet_syringes": {
       "name": "Janet Syringes",
-      "description": "Medical irrigation Janet syringes, large volume. Durable transparent barrel with clear scale and convenient plunger. Available with catheter tip or Luer. Volumes: 50–200 ml. For wound irrigation, cavity washing, bladder flushing, enteral nutrition, and emergency care."
+      "description": "Large-volume syringes for irrigation and aspiration. Volume 100/150/200 ml, catheter tip (Catheter Tip). Polypropylene, 3-component with sealing ring. Clear ml scale. Sterile, disposable."
     },
     "injection_needles": {
       "name": "Injection Needles",
-      "description": "Disposable hypodermic injection needles. Made of high-quality stainless steel with ultra-thin tri-bevel tip and silicone coating. ISO color-coded. Sizes: 16G to 30G, length 16–50 mm. Minimal tissue trauma."
+      "description": "Sterile disposable needles 18G–27G, length 13–50 mm. Stainless steel cannula, standard tri-bevel tip. Luer / Luer Lock connection. Color-coded per international standard."
     },
     "iv_catheters": {
       "name": "IV Catheters",
-      "description": "Peripheral intravenous catheters (cannulas). Flexible Teflon or polyurethane catheter with sharp steel needle and color-coded sizing. Sizes: 14G–26G, catheter length 19–50 mm. Easy insertion, minimal phlebitis risk."
+      "description": "Peripheral venous catheters 14G–24G, length 19–45 mm. Polyurethane or Teflon (PTFE). Construction with port, wings, and cap. In-vein dwell time up to 72 hours. Sterile, disposable."
     },
     "cavity_catheters": {
       "name": "Cavity Catheters",
-      "description": "Medical cavity drainage catheters. Flexible, radiopaque, with multiple side holes for effective drainage of fluids, air, or pus. Sizes: Fr 10–32. Used in surgery, traumatology, and intensive care."
+      "description": "Drainage catheters for internal cavities (urological, pleural, abdominal). Silicone or soft PVC, diameter 6–30 Fr. Side holes, radiopaque line. Balloon fixation or without. Sterile, disposable."
     },
     "infusion_sets": {
       "name": "Infusion Sets",
@@ -245,17 +245,41 @@
     "nm_f004": {
       "name": "Vinyl Examination Gloves (S–XL, powder-free, 100 pcs/box)"
     },
+    "nm_f005": {
+      "name": "Three-Layer Medical Mask (175×95 mm, BFE ≥ 95%)"
+    },
+    "nm_f007": {
+      "name": "Respirator FFP2/FFP3 (filtration up to 99%, EN 149)"
+    },
+    "nm_f008": {
+      "name": "Disposable Shoe Covers (39×15 cm, 20–40 µm)"
+    },
+    "nm_f009": {
+      "name": "Medical Cap (spunbond 12–20 g/m², universal)"
+    },
     "nm_f006": {
       "name": "Surgical Blades (#10–24, carbon/stainless steel)"
     },
     "nm_b001": {
       "name": "Disposable Syringe (1–100 ml, PE Bag / Blister)"
     },
+    "nm_b002": {
+      "name": "Janet Syringe (100/150/200 ml, Catheter Tip)"
+    },
+    "nm_b003": {
+      "name": "Injection Needle (18G–27G, 13–50 mm, Luer/Luer Lock)"
+    },
     "nm_b004": {
       "name": "Tuberculin Syringe (0.5/1 ml, 40/100 IU scale)"
     },
     "nm_b005": {
       "name": "Insulin Syringe (0.3/0.5/1 ml, 29G/30G needle)"
+    },
+    "nm_b006": {
+      "name": "Peripheral Venous Catheter (14G–24G, 19–45 mm)"
+    },
+    "nm_b007": {
+      "name": "Cavity Drainage Catheter (6–30 Fr, silicone/PVC)"
     },
     "nm_b012": {
       "name": "Infusion Set (filter, Y-site, SUS304 needle)"

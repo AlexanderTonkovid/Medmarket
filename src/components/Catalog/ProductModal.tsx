@@ -84,7 +84,9 @@ export default function ProductModal({ category, onClose }: Props) {
                 <ModalProductList>
                   {category.products.map((p) => (
                     <ModalProductItem key={p.slug}>
-                      <ModalProductArticle>{p.article}</ModalProductArticle>
+                      {p.article && (
+                        <ModalProductArticle>{p.article}</ModalProductArticle>
+                      )}
                       <ModalProductItemName>
                         {tProd(`${p.slug}.name`)}
                       </ModalProductItemName>

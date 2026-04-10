@@ -41,32 +41,32 @@ export const directions: Direction[] = [
       {
         slug: "latex_gloves",
         image: "/images/products/latex_gloves.png",
-        products: [{ slug: "nm_f002", article: "NM-F002", image: null }],
+        products: [{ slug: "nm_f002", article: "", image: null }],
       },
       {
         slug: "vinyl_gloves",
         image: "/images/products/latex_gloves.png",
-        products: [{ slug: "nm_f004", article: "NM-F004", image: null }],
+        products: [{ slug: "nm_f004", article: "", image: null }],
       },
       {
         slug: "medical_masks",
         image: "/images/products/medical_masks.png",
-        products: [],
+        products: [{ slug: "nm_f005", article: "", image: null }],
       },
       {
         slug: "respirators",
         image: "/images/products/respirators.png",
-        products: [],
+        products: [{ slug: "nm_f007", article: "", image: null }],
       },
       {
         slug: "shoe_covers",
         image: "/images/products/shoe_covers.png",
-        products: [],
+        products: [{ slug: "nm_f008", article: "", image: null }],
       },
       {
         slug: "caps",
         image: "/images/products/caps.png",
-        products: [],
+        products: [{ slug: "nm_f009", article: "", image: null }],
       },
     ],
   },
@@ -91,22 +91,22 @@ export const directions: Direction[] = [
       {
         slug: "janet_syringes",
         image: "/images/products/insulin_syringes.png",
-        products: [],
+        products: [{ slug: "nm_b002", article: "", image: null }],
       },
       {
         slug: "injection_needles",
         image: "/images/products/injection_needles.png",
-        products: [],
+        products: [{ slug: "nm_b003", article: "", image: null }],
       },
       {
         slug: "iv_catheters",
         image: "/images/products/iv_catheters.png",
-        products: [],
+        products: [{ slug: "nm_b006", article: "", image: null }],
       },
       {
         slug: "cavity_catheters",
         image: "/images/products/cavity_catheters.png",
-        products: [],
+        products: [{ slug: "nm_b007", article: "", image: null }],
       },
       {
         slug: "infusion_sets",
