@@ -325,17 +325,17 @@ export const directions: Direction[] = [
       },
       {
         slug: "microcentrifuge_tubes",
-        image: null,
+        image: "/images/products/microcentrifuge_tubes.png",
         products: [],
       },
       {
         slug: "pcr_tubes",
-        image: null,
+        image: "/images/products/pcr_tubes.png",
         products: [],
       },
       {
         slug: "coagulation_tubes",
-        image: null,
+        image: "/images/products/coagulation_tubes.png",
         products: [],
       },
     ],
