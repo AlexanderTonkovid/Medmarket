@@ -2,7 +2,7 @@
   "meta": {
     "title": "MedMarket — Medical Consumables",
     "description": "Online store of medical consumables: gloves, syringes, dressings, personal protective equipment. Delivery across Ukraine.",
-    "keywords": "medical consumables, medical gloves, syringes, bandages, medical masks, catheters, infusion sets"
+    "keywords": "medical consumables, medical gloves, syringes, bandages, medical masks, catheters, infusion sets, respiratory equipment"
   },
   "header": {
     "home": "Home",
@@ -19,7 +19,7 @@
   },
   "catalog": {
     "title": "Product Catalog",
-    "categories": {
+    "directions": {
       "ppe": {
         "title": "Personal Protective Equipment (PPE)",
         "description": "Gloves, masks, respirators, and other protective equipment for medical personnel"
@@ -35,95 +35,323 @@
       "general": {
         "title": "General Products & Sanitation",
         "description": "Disposable sheets, diapers, spatulas, probes, and containers for tests and disposal"
+      },
+      "respiratory": {
+        "title": "Respiratory Equipment",
+        "description": "Oxygen masks, nebulizers, nasal cannulas, resuscitators, and airways"
+      },
+      "catheters_urology": {
+        "title": "Catheters & Urology",
+        "description": "Foley and Nelaton catheters, urine bags, and urine meters for clinical use"
+      },
+      "surgical": {
+        "title": "Surgical Instruments",
+        "description": "Disposable surgical blades, scalpels, and other instruments for surgical procedures"
       }
     }
   },
+  "categories": {
+    "nitrile_gloves": {
+      "name": "Nitrile Gloves",
+      "description": "Powder-free disposable nitrile examination gloves. Weight 3–5 g, textured fingertips for better grip. Sizes: S, M, L, XL, XXL. Reliable protection against contaminants, hypoallergenic, latex-free. Packing: 100 pcs per box."
+    },
+    "surgical_gloves": {
+      "name": "Surgical Gloves",
+      "description": "Sterile surgical gloves made of natural latex. Sizes 6–9. Powder-free or powdered, textured surface. Pair in individual sterile pack. Excellent sensitivity and comfort during surgery."
+    },
+    "latex_gloves": {
+      "name": "Latex Gloves",
+      "description": "Disposable latex examination gloves. Powder-free or powdered, textured surface for reliable grip. Sizes: S, M, L, XL. Elastic with high tactile sensitivity. Packing: 100 pcs per box."
+    },
+    "vinyl_gloves": {
+      "name": "Vinyl Gloves",
+      "description": "Disposable powder-free vinyl examination gloves. Made of PVC (polyvinyl chloride). Smooth or textured surface. Sizes: S, M, L, XL. Hypoallergenic, latex-free. Ideal for short-duration procedures. Packing: 100 pcs per box."
+    },
+    "medical_masks": {
+      "name": "Medical Masks",
+      "description": "Three-layer surgical face masks. Inner layer — soft non-woven material, middle — high-efficiency meltblown filter (BFE ≥ 95–98%), outer — protective. Adjustable nose clip and elastic ear loops. Color: white, blue, green, black. Standard adult size (≈ 17.5 × 9.5 cm)."
+    },
+    "respirators": {
+      "name": "Respirators",
+      "description": "Medical respirators N95 / KN95 / FFP2 protection class. Multilayer construction with effective filtering material (filtration ≥ 95%). Adjustable nose clip and elastic straps. Color: white, gray, blue. Universal adult size."
+    },
+    "shoe_covers": {
+      "name": "Shoe Covers",
+      "description": "Disposable medical shoe covers. Made of durable polyethylene with elastic cuff for snug fit. Protect footwear and floors from contamination, liquids, and microorganisms. Color: blue, green, white, transparent. Universal size (length ≈ 40 cm, width ≈ 14–16 cm)."
+    },
+    "caps": {
+      "name": "Caps",
+      "description": "Disposable medical caps (bouffant / beret). Made of non-woven spunbond with elastic edge. Color: white, blue, green. Universal size (head circumference 54–62 cm)."
+    },
+    "standard_syringes": {
+      "name": "Standard Syringes",
+      "description": "Sterile disposable syringes, medical grade PVC. Two-part or three-part (barrel + plunger + needle/without needle). Volumes: 1–100 ml. Clear scale, smooth plunger. Individual PE Bag or Blister packing."
+    },
+    "insulin_syringes": {
+      "name": "Insulin Syringes",
+      "description": "Disposable insulin syringes with fixed needle 29G/30G. Volumes 0.3 ml, 0.5 ml, 1 ml. Scale 40/100 IU, latex-free piston. Medical PP, individual PE Bag or Blister packing."
+    },
+    "tuberculin_syringes": {
+      "name": "Tuberculin Syringes",
+      "description": "Disposable tuberculin syringes, medical grade PVC. Volume 0.5 ml or 1 ml. Scale 40/100 IU. Three-part, latex-free. Individual PE Bag or Blister packing. Perfect for precise injections and tests."
+    },
+    "janet_syringes": {
+      "name": "Janet Syringes",
+      "description": "Medical irrigation Janet syringes, large volume. Durable transparent barrel with clear scale and convenient plunger. Available with catheter tip or Luer. Volumes: 50–200 ml. For wound irrigation, cavity washing, bladder flushing, enteral nutrition, and emergency care."
+    },
+    "injection_needles": {
+      "name": "Injection Needles",
+      "description": "Disposable hypodermic injection needles. Made of high-quality stainless steel with ultra-thin tri-bevel tip and silicone coating. ISO color-coded. Sizes: 16G to 30G, length 16–50 mm. Minimal tissue trauma."
+    },
+    "iv_catheters": {
+      "name": "IV Catheters",
+      "description": "Peripheral intravenous catheters (cannulas). Flexible Teflon or polyurethane catheter with sharp steel needle and color-coded sizing. Sizes: 14G–26G, catheter length 19–50 mm. Easy insertion, minimal phlebitis risk."
+    },
+    "cavity_catheters": {
+      "name": "Cavity Catheters",
+      "description": "Medical cavity drainage catheters. Flexible, radiopaque, with multiple side holes for effective drainage of fluids, air, or pus. Sizes: Fr 10–32. Used in surgery, traumatology, and intensive care."
+    },
+    "infusion_sets": {
+      "name": "Infusion Sets",
+      "description": "Disposable IV infusion set for intravenous administration. Includes vent spike with cap, drip chamber, filter, flow regulator, Y-site injection port, PVC tube, SUS304 stainless steel needle. Latex-free."
+    },
+    "blood_transfusion_sets": {
+      "name": "Blood Transfusion Sets",
+      "description": "Disposable blood transfusion set. Includes vent spike, filter, drip chamber, flow regulator, Y-site, SUS304 needle. Latex-free rubber gasket. Precise and safe blood/component transfusion."
+    },
+    "scalp_vein_sets": {
+      "name": "Scalp Vein Sets (Butterfly)",
+      "description": "Disposable scalp vein set (butterfly needle) with single or double wings. SUS304 stainless steel needle, Luer lock or slip. Color-coded sizes. Ideal for venous infusion and blood collection. Latex-free."
+    },
+    "infusion_pumps": {
+      "name": "Infusion Pumps",
+      "description": "Disposable infusion pump (CBI / CP / Multi-velocity). Volume 60–300 ml, various flow rates (0.5–12 ml/h). Silicone membrane for uniform analgesic delivery."
+    },
+    "bandages": {
+      "name": "Gauze Bandage Rolls",
+      "description": "Sterile gauze roll made of 100% cotton. High absorbency, soft and non-adherent to wounds. Width 5–10 cm, length 5–10 m. Used for securing bandages and compresses."
+    },
+    "gauze": {
+      "name": "Gauze Swabs",
+      "description": "Sterile gauze swabs made of 100% cotton. Soft, highly absorbent. Sizes: 2×2\", 3×3\", 4×4\", 6×6\". Ply: 8-ply, 12-ply, 16-ply, 24-ply."
+    },
+    "cotton": {
+      "name": "Cotton Wool",
+      "description": "Sterile or non-sterile cotton balls made of 100% natural cotton. Used for wound cleaning and hygiene. Various weights (0.3–5.0 g). Sealed poly bag packing."
+    },
+    "non_woven_swabs": {
+      "name": "Non-woven Swabs",
+      "description": "Disposable non-woven swabs made of 70% polyethylene + 30% terylene. High absorbency, non-adherent. Sizes 2×2\", 3×3\", 4×4\". Non-sterile."
+    },
+    "catgut": {
+      "name": "Catgut Suture",
+      "description": "Absorbable surgical suture catgut (plain / chromic). Sterile, made of natural collagen. Color: beige / brownish. Sizes: USP 6/0 – 2, length 75–150 cm."
+    },
+    "nylon_suture": {
+      "name": "Nylon Suture",
+      "description": "Non-absorbable nylon monofilament surgical suture. Sterile, high strength and smooth surface. Color: black / blue. Sizes: USP 10/0 – 2, length 45–150 cm."
+    },
+    "plasters": {
+      "name": "Adhesive Plasters",
+      "description": "Medical adhesive plasters (band-aids). Sterile, hypoallergenic adhesive, reliable fixation. Color: skin tone / white. Sizes: rolls 1.25–10 cm width (5–10 m length), individual pieces."
+    },
+    "ready_dressings": {
+      "name": "Ready-made Dressings",
+      "description": "Sterile ready-made dressings with absorbent pad. Quick application, infection protection. Color: white / skin tone. Sizes: 5×7 cm, 9×10 cm, 10×15 cm, 15×20 cm."
+    },
+    "disposable_sheets": {
+      "name": "Disposable Sheets",
+      "description": "Disposable medical sheets made of non-woven material. Sterile packed, water-repellent or absorbent. Color: white, blue, green. Sizes: 80×200 cm, 100×200 cm, 120×200 cm."
+    },
+    "disposable_diapers": {
+      "name": "Adult Diapers",
+      "description": "Medical absorbent adult diapers. Sterile packaging, high absorption and comfort. Sizes: S, M, L, XL (waist circumference 50–170 cm)."
+    },
+    "spatulas": {
+      "name": "Spatulas",
+      "description": "Disposable medical spatulas (tongue depressors). Sterile, smooth with rounded edges. Sizes: adult (150–180 mm), pediatric."
+    },
+    "probes": {
+      "name": "Probes",
+      "description": "Medical probes (gastric, rectal, diagnostic). Sterile, radiopaque, smooth surface. Sizes: Fr 6–36, length 40–150 cm."
+    },
+    "analysis_containers": {
+      "name": "Specimen Containers",
+      "description": "Sterile medical specimen containers for biomaterial. Leak-proof cap, graduated scale. Volume: 30 ml, 60 ml, 90 ml, 120 ml."
+    },
+    "disposal_containers": {
+      "name": "Sharps Containers",
+      "description": "Medical sharps disposal containers. Puncture-proof, with fill indicator. Color: yellow (biohazard). Volume: 0.5 L, 1 L, 2 L, 5 L."
+    },
+    "oxygen_masks": {
+      "name": "Oxygen Masks",
+      "description": "Disposable oxygen masks made of medical grade PVC. Adjustable nose clip, elastic strap, 2.1 m oxygen tube. Latex-free. Sizes XS–XL. Simple mask and mask with reservoir bag (non-rebreathing). DEHP-free available."
+    },
+    "nebulizer_masks": {
+      "name": "Nebulizer Masks",
+      "description": "Disposable nebulizer mask made of medical grade PVC. Adjustable nose clip, elastic strap, 2.1 m oxygen tube. 6 ml nebulizer jar. Latex-free, DEHP-free available. Sizes: XS–XL."
+    },
+    "nasal_cannulas": {
+      "name": "Nasal Cannulas",
+      "description": "Disposable nasal oxygen cannula made of medical grade PVC. Soft tip, 2.1 m / 1.5 m oxygen tube. Latex-free, DEHP-free available. Sizes XS–XL."
+    },
+    "tracheostomy_masks": {
+      "name": "Tracheostomy Masks",
+      "description": "Disposable tracheostomy mask made of medical grade PVC. Flexible mask with elastic head strap and 360° rotation connector. Sizes: Adult and Children."
+    },
+    "manual_resuscitators": {
+      "name": "Manual Resuscitators (Ambu)",
+      "description": "Disposable PVC manual resuscitator (Ambu bag). Built-in 60/40 cm H₂O pressure relief valve, oxygen reservoir, PVC mask. Latex-free. Sizes: Adult / Pediatric / Infant."
+    },
+    "guedel_airways": {
+      "name": "Guedel Airways",
+      "description": "Disposable Guedel airway (oropharyngeal airway) made of semirigid non-toxic polyethylene. Color-coded sizes, bite block to protect teeth. Sizes 00#–6#."
+    },
+    "laryngeal_masks": {
+      "name": "Laryngeal Masks",
+      "description": "Disposable silicone laryngeal mask airway, 100% medical grade silicone. Non-epiglottis-bar design, deep cuff bowl for excellent seal. Sizes 1–5."
+    },
+    "foley_catheters": {
+      "name": "Foley Catheters",
+      "description": "Latex Foley catheters (silicone coated). 2-way and 3-way variants. Balloon capacity 5/10/30 cc. Length 270–400 mm. Sizes Fr6–Fr30. Individual sterile Blister Bag packing."
+    },
+    "nelaton_catheters": {
+      "name": "Nelaton Catheters",
+      "description": "Disposable Nelaton catheter made of PVC. Closed tip with two lateral eyes, color-coded sizes. Length 40 cm (male) / 20 cm (female). Latex-free, DEHP-free available."
+    },
+    "urine_bags": {
+      "name": "Urine Bags",
+      "description": "Disposable urine bags, 2000 ml capacity. Economic variant and variant with Pull-Push valve. 90 cm inlet tube. Sterile, easy to fix."
+    },
+    "urine_meters": {
+      "name": "Urine Meters",
+      "description": "Sterile urine meter, 500 ml with precise measuring chamber. Universal double-hook, needleless sampling port, anti-reflux, 120 cm tube. For accurate urine output monitoring in ICU."
+    },
+    "surgical_blades": {
+      "name": "Surgical Blades",
+      "description": "Sterile disposable surgical blades. Carbon or stainless steel. Sizes 10#, 11#, 15#, 21#, 22#, 23#, 24#. Individual foil pack."
+    }
+  },
   "products": {
-    "ppe": {
-      "latex_gloves": {
-        "name": "Latex Gloves",
-        "description": "Sterile / Examination"
-      },
-      "nitrile_gloves": {
-        "name": "Nitrile Gloves",
-        "description": "Sterile / Examination"
-      },
-      "vinyl_gloves": {
-        "name": "Vinyl Gloves",
-        "description": "Sterile / Examination"
-      },
-      "medical_masks": {
-        "name": "Medical Masks",
-        "description": "Three-layer, disposable"
-      },
-      "respirators": { "name": "Respirators", "description": "FFP2/FFP3" },
-      "shoe_covers": { "name": "Shoe Covers", "description": "Disposable" },
-      "caps": { "name": "Caps", "description": "Disposable" }
+    "nm_f001": {
+      "name": "Nitrile Examination Gloves (S–XXL, 3–5 g, 100 pcs/box)"
     },
-    "injection": {
-      "insulin_syringes": { "name": "Insulin Syringes", "description": "1 ml" },
-      "standard_syringes": {
-        "name": "Standard Syringes",
-        "description": "2, 5, 10, 20 ml"
-      },
-      "janet_syringes": { "name": "Janet Syringes", "description": "150 ml" },
-      "injection_needles": {
-        "name": "Injection Needles",
-        "description": "Various sizes (G)"
-      },
-      "iv_catheters": {
-        "name": "IV Catheters",
-        "description": "Cannulas of various sizes"
-      },
-      "cavity_catheters": {
-        "name": "Cavity Catheters",
-        "description": "For fluid drainage"
-      },
-      "infusion_sets": {
-        "name": "Infusion Sets",
-        "description": "For drip transfusion"
-      }
+    "nm_f003": {
+      "name": "Sterile Surgical Gloves (sizes 6–9)"
     },
-    "dressing": {
-      "bandages": {
-        "name": "Bandages",
-        "description": "Sterile / non-sterile, various widths"
-      },
-      "gauze": { "name": "Gauze", "description": "In rolls / napkins" },
-      "cotton": { "name": "Cotton Wool", "description": "Medical grade" },
-      "catgut": {
-        "name": "Suture Material (Catgut)",
-        "description": "Absorbable"
-      },
-      "nylon_suture": {
-        "name": "Suture Material (Nylon)",
-        "description": "Non-absorbable"
-      },
-      "plasters": { "name": "Plasters", "description": "Various sizes" },
-      "ready_dressings": {
-        "name": "Ready-made Dressings",
-        "description": "Sterile, for wounds and catheters"
-      }
+    "nm_f002": {
+      "name": "Latex Examination Gloves (S–XL, 100 pcs/box)"
     },
-    "general": {
-      "disposable_sheets": {
-        "name": "Disposable Sheets",
-        "description": "For examination couches"
-      },
-      "disposable_diapers": {
-        "name": "Disposable Underpads",
-        "description": "For procedures"
-      },
-      "spatulas": { "name": "Spatulas", "description": "For oral examination" },
-      "probes": { "name": "Probes", "description": "For swab collection" },
-      "analysis_containers": {
-        "name": "Analysis Containers",
-        "description": "Urine, stool"
-      },
-      "disposal_containers": {
-        "name": "Disposal Containers",
-        "description": "For sharps waste"
-      }
+    "nm_f004": {
+      "name": "Vinyl Examination Gloves (S–XL, powder-free, 100 pcs/box)"
+    },
+    "nm_f006": {
+      "name": "Surgical Blades (#10–24, carbon/stainless steel)"
+    },
+    "nm_b001": {
+      "name": "Disposable Syringe (1–100 ml, PE Bag / Blister)"
+    },
+    "nm_b004": {
+      "name": "Tuberculin Syringe (0.5/1 ml, 40/100 IU scale)"
+    },
+    "nm_b005": {
+      "name": "Insulin Syringe (0.3/0.5/1 ml, 29G/30G needle)"
+    },
+    "nm_b012": {
+      "name": "Infusion Set (filter, Y-site, SUS304 needle)"
+    },
+    "nm_b015": {
+      "name": "Blood Transfusion Set (filter, Y-site, SUS304)"
+    },
+    "nm_b016": {
+      "name": "Scalp Vein Set (wings, Luer lock/slip, color-coded)"
+    },
+    "nm_b022": {
+      "name": "Infusion Pump CBI/CP (60–300 ml, 0.5–12 ml/h)"
+    },
+    "nm_e001": {
+      "name": "Sterile Gauze Swabs (2×2\"–6×6\", 8–24 ply)"
+    },
+    "nm_e002": {
+      "name": "Gauze Roll (5–10 cm × 5–10 m, 100% cotton)"
+    },
+    "nm_e003": {
+      "name": "Catgut plain/chromic (USP 6/0 – 2, 75–150 cm)"
+    },
+    "nm_e004": {
+      "name": "Nylon monofilament (USP 10/0 – 2, 45–150 cm)"
+    },
+    "nm_e005": {
+      "name": "Non-woven Swabs (2×2\"–4×4\", 70% PE + 30% terylene)"
+    },
+    "nm_e006": {
+      "name": "Adhesive Plaster (rolls 1.25–10 cm, 5–10 m)"
+    },
+    "nm_e007": {
+      "name": "Ready-made Dressing with pad (5×7 – 15×20 cm)"
+    },
+    "nm_e010": {
+      "name": "Cotton Balls (0.3–5 g, 100% cotton)"
+    },
+    "nm_g001": {
+      "name": "Disposable Sheet (80×200 – 120×200 cm, non-woven)"
+    },
+    "nm_g002": {
+      "name": "Adult Diaper (S–XL, waist 50–170 cm)"
+    },
+    "nm_g003": {
+      "name": "Wooden/Plastic Spatula (150–180 mm)"
+    },
+    "nm_g004": {
+      "name": "Medical Probe (Fr 6–36, 40–150 cm)"
+    },
+    "nm_g005": {
+      "name": "Specimen Container (30–120 ml, graduated)"
+    },
+    "nm_g006": {
+      "name": "Sharps Container (0.5–5 L, puncture-proof)"
+    },
+    "nm_a001": {
+      "name": "Simple Oxygen Mask (XS–XL, 2.1 m tube)"
+    },
+    "nm_a002": {
+      "name": "Nebulizer Mask (6 ml jar, XS–XL)"
+    },
+    "nm_a005": {
+      "name": "Nasal Oxygen Cannula (soft tip, 2.1 m)"
+    },
+    "nm_a006": {
+      "name": "Oxygen Mask with Reservoir Bag (500/1000 ml)"
+    },
+    "nm_a007": {
+      "name": "Tracheostomy Mask (360° connector, Adult/Children)"
+    },
+    "nm_a012": {
+      "name": "PVC Manual Resuscitator (Adult/Pediatric/Infant)"
+    },
+    "nm_c027": {
+      "name": "Guedel Airway (00#–6#, color-coded)"
+    },
+    "nm_c029": {
+      "name": "Silicone Laryngeal Mask (sizes 1–5)"
+    },
+    "nm_c001": {
+      "name": "2-Way Foley Catheter (Fr6–Fr30, balloon 5/10/30 cc)"
+    },
+    "nm_c002": {
+      "name": "3-Way Foley Catheter (irrigation, balloon 30 cc)"
+    },
+    "nm_c042": {
+      "name": "Nelaton Catheter (Fr6–Fr24, male 40 cm / female 20 cm)"
+    },
+    "nm_d001": {
+      "name": "Economic Urine Bag (2000 ml, 90 cm tube)"
+    },
+    "nm_d002": {
+      "name": "Urine Bag with Pull-Push Valve (2000 ml)"
+    },
+    "nm_d005": {
+      "name": "Urine Meter (500 ml, double hook, anti-reflux)"
     }
   },
   "footer": {
@@ -135,6 +363,9 @@
     "readMore": "Read More",
     "orderNow": "Order Now",
     "product": "Product",
-    "description": "Description"
+    "description": "Description",
+    "article": "Article",
+    "products": "Products",
+    "noProducts": "Products coming soon"
   }
 }

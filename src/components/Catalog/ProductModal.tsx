@@ -2,6 +2,8 @@
 
 import { useEffect, useCallback } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import type { Category } from "@/data/products";
 import {
   ModalOverlay,
   ModalContent,
@@ -11,22 +13,26 @@ import {
   ModalBody,
   ModalProductName,
   ModalProductDescription,
+  ModalDivider,
+  ModalProductsTitle,
+  ModalProductList,
+  ModalProductItem,
+  ModalProductArticle,
+  ModalProductItemName,
+  ModalNoProducts,
   ProductImagePlaceholder,
 } from "./styles";
 
 interface Props {
-  image: string | null;
-  name: string;
-  description: string;
+  category: Category;
   onClose: () => void;
 }
 
-export default function ProductModal({
-  image,
-  name,
-  description,
-  onClose,
-}: Props) {
+export default function ProductModal({ category, onClose }: Props) {
+  const tCat = useTranslations("categories");
+  const tProd = useTranslations("products");
+  const tCommon = useTranslations("common");
+
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -43,6 +49,9 @@ export default function ProductModal({
     };
   }, [handleKeyDown]);
 
+  const name = tCat(`${category.slug}.name`);
+  const desc = tCat(`${category.slug}.description`);
+
   return (
     <ModalOverlay onClick={onClose}>
       <ModalContent onClick={(e) => e.stopPropagation()}>
@@ -51,9 +60,9 @@ export default function ProductModal({
         </ModalClose>
         <ModalScrollArea>
           <ModalImageWrapper>
-            {image ? (
+            {category.image ? (
               <Image
-                src={image}
+                src={category.image}
                 alt={name}
                 width={560}
                 height={560}
@@ -65,7 +74,27 @@ export default function ProductModal({
           </ModalImageWrapper>
           <ModalBody>
             <ModalProductName>{name}</ModalProductName>
-            <ModalProductDescription>{description}</ModalProductDescription>
+            <ModalProductDescription>{desc}</ModalProductDescription>
+
+            <ModalDivider />
+
+            {category.products.length > 0 ? (
+              <>
+                <ModalProductsTitle>{tCommon("products")}</ModalProductsTitle>
+                <ModalProductList>
+                  {category.products.map((p) => (
+                    <ModalProductItem key={p.slug}>
+                      <ModalProductArticle>{p.article}</ModalProductArticle>
+                      <ModalProductItemName>
+                        {tProd(`${p.slug}.name`)}
+                      </ModalProductItemName>
+                    </ModalProductItem>
+                  ))}
+                </ModalProductList>
+              </>
+            ) : (
+              <ModalNoProducts>{tCommon("noProducts")}</ModalNoProducts>
+            )}
           </ModalBody>
         </ModalScrollArea>
       </ModalContent>

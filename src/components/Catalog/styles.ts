@@ -257,20 +257,21 @@ export const ModalOverlay = styled.div`
 export const ModalContent = styled.div`
   background: ${({ theme }) => theme.colors.white};
   border-radius: 12px;
-  max-width: 480px;
+  max-width: 560px;
   width: 100%;
+  max-height: 90vh;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   animation: slideUp 0.25s ease;
   position: relative;
+  display: flex;
+  flex-direction: column;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     max-width: 100%;
+    max-height: 100%;
     height: 100%;
     border-radius: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
 
   @keyframes slideUp {
@@ -308,7 +309,10 @@ export const ModalClose = styled.button`
   }
 `;
 
-export const ModalScrollArea = styled.div``;
+export const ModalScrollArea = styled.div`
+  overflow-y: auto;
+  flex: 1;
+`;
 
 export const ModalImageWrapper = styled.div`
   width: 100%;
@@ -340,4 +344,53 @@ export const ModalProductDescription = styled.p`
   font-size: 1rem;
   color: ${({ theme }) => theme.colors.textSecondary};
   line-height: 1.6;
+`;
+
+export const ModalDivider = styled.hr`
+  border: none;
+  border-top: 1px solid ${({ theme }) => theme.colors.border};
+  margin: 20px 0;
+`;
+
+export const ModalProductsTitle = styled.h4`
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: ${({ theme }) => theme.colors.text};
+  margin-bottom: 12px;
+`;
+
+export const ModalProductList = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`;
+
+export const ModalProductItem = styled.li`
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: ${({ theme }) => theme.radius.sm};
+  background: ${({ theme }) => theme.colors.primaryLight};
+`;
+
+export const ModalProductArticle = styled.span`
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: ${({ theme }) => theme.colors.primary};
+  white-space: nowrap;
+`;
+
+export const ModalProductItemName = styled.span`
+  font-size: 0.95rem;
+  color: ${({ theme }) => theme.colors.text};
+`;
+
+export const ModalNoProducts = styled.p`
+  font-size: 0.95rem;
+  color: ${({ theme }) => theme.colors.textSecondary};
+  font-style: italic;
 `;

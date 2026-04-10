@@ -3,12 +3,11 @@
 import { useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import type { Category, Product } from "@/data/products";
+import type { Direction, Category } from "@/data/products";
 import ProductModal from "./ProductModal";
 import {
   CategoryBlock,
   CategoryHeader,
-  CategoryImage,
   CategoryTitle,
   CategoryDescription,
   ProductGrid,
@@ -21,45 +20,37 @@ import {
 } from "./styles";
 
 interface Props {
-  category: Category;
+  direction: Direction;
 }
 
-export default function CategorySection({ category }: Props) {
-  const tCat = useTranslations(`catalog.categories.${category.slug}`);
-  const tProducts = useTranslations(`products.${category.slug}`);
-  const [selectedProduct, setSelectedProduct] = useState<{
-    image: string | null;
-    name: string;
-    description: string;
-  } | null>(null);
+export default function CategorySection({ direction }: Props) {
+  const tDir = useTranslations(`catalog.directions.${direction.slug}`);
+  const tCats = useTranslations("categories");
+  const [selectedCategory, setSelectedCategory] = useState<Category | null>(
+    null,
+  );
 
   return (
     <CategoryBlock>
       <CategoryHeader>
-        <CategoryTitle>{tCat("title")}</CategoryTitle>
+        <CategoryTitle>{tDir("title")}</CategoryTitle>
       </CategoryHeader>
-      <CategoryDescription>{tCat("description")}</CategoryDescription>
+      <CategoryDescription>{tDir("description")}</CategoryDescription>
 
       <ProductGrid>
-        {category.products.map((product) => {
-          const name = tProducts(`${product.slug}.name`);
-          const desc = tProducts(`${product.slug}.description`);
+        {direction.categories.map((cat) => {
+          const name = tCats(`${cat.slug}.name`);
+          const desc = tCats(`${cat.slug}.description`);
 
           return (
             <ProductCard
-              key={product.slug}
-              onClick={() =>
-                setSelectedProduct({
-                  image: product.image,
-                  name,
-                  description: desc,
-                })
-              }
+              key={cat.slug}
+              onClick={() => setSelectedCategory(cat)}
             >
               <ProductImageWrapper>
-                {product.image ? (
+                {cat.image ? (
                   <Image
-                    src={product.image}
+                    src={cat.image}
                     alt={name}
                     width={480}
                     height={480}
@@ -71,19 +62,19 @@ export default function CategorySection({ category }: Props) {
               </ProductImageWrapper>
               <ProductInfo>
                 <ProductName>{name}</ProductName>
-                <ProductDescription>{desc}</ProductDescription>
+                <ProductDescription>
+                  {desc.length > 100 ? desc.slice(0, 100) + "…" : desc}
+                </ProductDescription>
               </ProductInfo>
             </ProductCard>
           );
         })}
       </ProductGrid>
 
-      {selectedProduct && (
+      {selectedCategory && (
         <ProductModal
-          image={selectedProduct.image}
-          name={selectedProduct.name}
-          description={selectedProduct.description}
-          onClose={() => setSelectedProduct(null)}
+          category={selectedCategory}
+          onClose={() => setSelectedCategory(null)}
         />
       )}
     </CategoryBlock>
