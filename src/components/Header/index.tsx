@@ -30,9 +30,14 @@ const Logo = styled.a`
   display: flex;
   align-items: center;
   gap: 8px;
+  white-space: nowrap;
 
   span {
     color: ${({ theme }) => theme.colors.secondary};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    font-size: 1.1rem;
   }
 `;
 
