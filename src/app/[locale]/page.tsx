@@ -3,6 +3,7 @@ import { setRequestLocale } from "next-intl/server";
 import { directions } from "@/data/products";
 import CategorySection from "@/components/Catalog/CategorySection";
 import CatalogBlock from "@/components/Catalog/CatalogBlock";
+import HeroBlock from "@/components/Catalog/HeroBlock";
 
 export default function HomePage({
   params,
@@ -14,6 +15,7 @@ export default function HomePage({
 
   return (
     <>
+      <HeroBlock />
       <CatalogBlock>
         {directions.map((dir) => (
           <CategorySection key={dir.slug} direction={dir} />

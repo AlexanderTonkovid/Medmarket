@@ -3,82 +3,53 @@
 import styled from "styled-components";
 
 export const HeroSection = styled.section`
-  background: linear-gradient(
-    135deg,
-    ${({ theme }) => theme.colors.primary} 0%,
-    ${({ theme }) => theme.colors.primaryDark} 100%
-  );
-  color: ${({ theme }) => theme.colors.white};
-  padding: 80px 20px;
+  background: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.text};
+  padding: 20px 20px 16px;
   text-align: center;
-  position: relative;
-  overflow: hidden;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    right: -20%;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -30%;
-    left: -10%;
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.03);
-  }
 `;
 
 export const HeroInner = styled.div`
   max-width: 800px;
   margin: 0 auto;
-  position: relative;
-  z-index: 1;
 `;
 
 export const HeroIcon = styled.div`
-  font-size: 3.5rem;
-  margin-bottom: 16px;
+  font-size: 1.8rem;
+  margin-bottom: 4px;
 `;
 
 export const HeroTitle = styled.h1`
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
   font-weight: 800;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
+  color: ${({ theme }) => theme.colors.primary};
   letter-spacing: -0.5px;
 `;
 
 export const HeroSubtitle = styled.p`
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
-  opacity: 0.9;
-  margin-bottom: 32px;
-  max-width: 600px;
+  font-size: 0.9rem;
+  color: ${({ theme }) => theme.colors.textSecondary};
+  line-height: 1.5;
+  margin-bottom: 12px;
+  max-width: 640px;
   margin-left: auto;
   margin-right: auto;
 `;
 
 export const HeroCta = styled.a`
   display: inline-block;
-  padding: 14px 36px;
-  background: ${({ theme }) => theme.colors.white};
-  color: ${({ theme }) => theme.colors.primary};
+  padding: 10px 28px;
+  background: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.white};
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.9rem;
   border-radius: ${({ theme }) => theme.radius.full};
   transition: all ${({ theme }) => theme.transitions.normal};
-  box-shadow: ${({ theme }) => theme.shadows.lg};
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+    box-shadow: ${({ theme }) => theme.shadows.md};
   }
 `;
 

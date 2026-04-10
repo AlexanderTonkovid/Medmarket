@@ -14,7 +14,7 @@
   },
   "hero": {
     "title": "Medical Consumables",
-    "subtitle": "Reliable supplier for clinics, laboratories, and pharmacies",
+    "subtitle": "Reliable supplier for clinics, laboratories, and pharmacies. Direct deliveries from the manufacturer: gloves, syringes, dressing materials, catheters, respiratory equipment, and laboratory ware. Competitive prices and delivery across Ukraine.",
     "cta": "Browse Catalog"
   },
   "catalog": {
@@ -412,6 +412,30 @@
     },
     "nm_d005": {
       "name": "Urine Meter (500 ml, double hook, anti-reflux)"
+    },
+    "tt_vacuum": {
+      "name": "Vacuum blood collection tube with color-coded cap"
+    },
+    "tt_conical": {
+      "name": "Conical centrifuge tube (Falcon) 15/50 ml, graduated"
+    },
+    "tt_glass": {
+      "name": "Glass laboratory test tube with cork stopper"
+    },
+    "tt_screw_cap": {
+      "name": "Screw-cap test tube, graduated"
+    },
+    "tt_specimen": {
+      "name": "Sterile specimen container (urine, stool, sputum)"
+    },
+    "tt_microcentrifuge": {
+      "name": "Microcentrifuge tube (Eppendorf) 0.2–2 ml"
+    },
+    "tt_pcr": {
+      "name": "Thin-walled PCR tube 0.2 ml"
+    },
+    "tt_coagulation": {
+      "name": "Sodium citrate tube (light blue cap) for coagulation"
     }
   },
   "footer": {
